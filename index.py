@@ -49,12 +49,7 @@
 # exit
 
 peopleInfo = {}
-numberOfPeople = 0
 
-Name = ""
-Age = None
-Address = ""
-Contact = None
 
 def showOption():
     print("\n============= Menu =============")
@@ -64,10 +59,12 @@ def getInfo():
     Name = input("Type your name: ")
     Age = int(input("Type your age: "))
     Address = input("Type your address: ")
-    Contact = int(input("Type your name: "))
-
-def addNew():
-    numberOfPeople = numberOfPeople+1
-    peopleInfo[numberOfPeople]
-    print()
+    Contact = input("Type your contact#: ")
+    peopleInfo[Name] = {}
+    peopleInfo[Name]['PersonName'] = Name
+    peopleInfo[Name]['PersonAge'] = Age
+    peopleInfo[Name]['PersonAddress'] = Address
+    peopleInfo[Name]['PersonContact'] = Contact
+    print(peopleInfo)
+    
     
