@@ -56,7 +56,7 @@ def showOption():
     print("\n============= Menu =============")
     print("\n1 -> Add an item\n2 -> Search\n3 -> Exit (y/n)\n")
 
-def getInfo():
+def addPerson():
     Name = input("Type your name: ")
     Age = int(input("Type your age: "))
     Address = input("Type your address: ")
@@ -72,10 +72,11 @@ def getInfo():
 def main():
     print("\n")
     print("= = = = = = CONTACT TRACING = = = = = =")
+    showOption()
     while(True):
         userInput = input('Option: ')
         if(userInput == "1"):
-            getInfo()
+            addPerson()
         else:
             break
         
