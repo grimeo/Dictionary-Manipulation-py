@@ -51,9 +51,23 @@
 peopleInfo = {}
 numberOfPeople = 0
 
+Name = ""
+Age = None
+Address = ""
+Contact = None
+
 def showOption():
     print("\n============= Menu =============")
     print("\n1 -> Add an item\n2 -> Search\n3 -> Exit (y/n)\n")
 
+def getInfo():
+    Name = input("Type your name: ")
+    Age = int(input("Type your age: "))
+    Address = input("Type your address: ")
+    Contact = int(input("Type your name: "))
+
 def addNew():
+    numberOfPeople = numberOfPeople+1
+    peopleInfo[numberOfPeople]
     print()
+    
