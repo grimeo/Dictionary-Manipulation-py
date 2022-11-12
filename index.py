@@ -48,6 +48,8 @@
 # search
 # exit
 
+from datetime import datetime
+
 peopleInfo = {}
 
 
@@ -66,13 +68,17 @@ def addPerson():
     peopleInfo[Name]['PersonAge'] = Age
     peopleInfo[Name]['PersonAddress'] = Address
     peopleInfo[Name]['PersonContact'] = Contact
+    peopleInfo[Name]['Date and Time'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     print("\nInformation Saved!")
 
 def search(arg):
-    for x in peopleInfo:
-        if(arg==x):
-            print(peopleInfo[x])
-
+    print(peopleInfo)
+    for personName, personDetails in peopleInfo.items():
+        if(arg==personName):
+            print("\n\nInformation of", personName, "\n")
+            for key in personDetails:
+                print(key + " :",personDetails[key])
+            
 def main():
     print("\n")
     print("= = = = = = CONTACT TRACING = = = = = =")
