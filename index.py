@@ -49,9 +49,11 @@
 # exit
 
 peopleInfo = {}
+numberOfPeople = 0
 
 def showOption():
     print("\n============= Menu =============")
     print("\n1 -> Add an item\n2 -> Search\n3 -> Exit (y/n)\n")
-    
-showOption()
+
+def addNew():
+    print()
