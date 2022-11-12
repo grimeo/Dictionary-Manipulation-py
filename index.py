@@ -66,10 +66,12 @@ def addPerson():
     peopleInfo[Name]['PersonAge'] = Age
     peopleInfo[Name]['PersonAddress'] = Address
     peopleInfo[Name]['PersonContact'] = Contact
-    print("/nInformation Saved!")
+    print("\nInformation Saved!")
 
-def search():
-    print()
+def search(arg):
+    for x in peopleInfo:
+        if(arg==x):
+            print(peopleInfo[x])
 
 def main():
     print("\n")
@@ -81,7 +83,8 @@ def main():
         if(userInput == "1"):
             addPerson()
         if(userInput == "2"):
-            search()
+            nameToSearch = input("Search your name: ")
+            search(nameToSearch)
         if(userInput == "3"):
             YorN = input("Exit? (y/n)")
             if(YorN=="y"):
