@@ -52,6 +52,7 @@ peopleInfo = {}
 
 
 def showOption():
+    print("")
     print("\n============= Menu =============")
     print("\n1 -> Add an item\n2 -> Search\n3 -> Exit (y/n)\n")
 
@@ -65,6 +66,16 @@ def getInfo():
     peopleInfo[Name]['PersonAge'] = Age
     peopleInfo[Name]['PersonAddress'] = Address
     peopleInfo[Name]['PersonContact'] = Contact
-    print(peopleInfo)
-    
-    
+    print("Information Saved.")
+
+
+def main():
+    print("\n")
+    print("= = = = = = CONTACT TRACING = = = = = =")
+    while(True):
+        userInput = input('Option: ')
+        if(userInput == "1"):
+            getInfo()
+        else:
+            break
+        
