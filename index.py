@@ -66,17 +66,25 @@ def addPerson():
     peopleInfo[Name]['PersonAge'] = Age
     peopleInfo[Name]['PersonAddress'] = Address
     peopleInfo[Name]['PersonContact'] = Contact
-    print("Information Saved.")
+    print("/nInformation Saved!")
 
+def search():
+    print()
 
 def main():
     print("\n")
     print("= = = = = = CONTACT TRACING = = = = = =")
-    showOption()
     while(True):
+        showOption()
+        print("Choose from 1-3")
         userInput = input('Option: ')
         if(userInput == "1"):
             addPerson()
-        else:
-            break
+        if(userInput == "2"):
+            search()
+        if(userInput == "3"):
+            YorN = input("Exit? (y/n)")
+            if(YorN=="y"):
+                break
         
+main()
